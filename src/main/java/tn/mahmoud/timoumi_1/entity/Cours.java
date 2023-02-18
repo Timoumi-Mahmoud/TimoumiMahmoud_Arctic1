@@ -1,9 +1,17 @@
 package tn.mahmoud.timoumi_1.entity;
+/*
+
+oneTomany uni TR
+ */
+
+
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="Cours")
@@ -66,6 +74,9 @@ public class Cours {
         this.vile = vile;
     }
 
+
+    @OneToMany(mappedBy = "cour")
+    private Set<Inscription> inscriptions;
 
     @Override
     public String toString() {

@@ -1,6 +1,7 @@
 package tn.mahmoud.timoumi_1.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.lang.reflect.Type;
@@ -14,6 +15,8 @@ public class Abonnement {
     private Date dateDebut;
     private Date dateFin;
     private Float prixAbon;
+
+    @Enumerated
     private TypeAbonnement typeAbon;
 
 

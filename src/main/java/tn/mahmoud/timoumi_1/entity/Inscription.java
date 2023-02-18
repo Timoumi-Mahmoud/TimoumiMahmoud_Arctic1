@@ -15,6 +15,13 @@ public class Inscription {
     private float  prixAbon;
     private TypeAbonnement typeAbon;
 
+
+
+    @ManyToOne
+    private Skieur skieur;
+    @ManyToOne
+    private  Cours cour;
+
     public Inscription() {
     }
 

@@ -1,9 +1,8 @@
 package tn.mahmoud.timoumi_1.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "Skieur")
@@ -13,6 +12,23 @@ public class Skieur {
     private String nomS;
     private Date dateNaissance;
     private String  vile;
+/*
+
+    @ManyToMany(targetEntity = Piste.class,cascade = {CascadeType.PERSIST, CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH} , fetch = FetchType.EAGER)
+    private Set<Piste> Pistes  ;
+
+ */
+
+    @OneToOne
+   private Abonnement Abonnements;
+
+
+    @OneToMany(mappedBy = "skieur")
+    private Set<Inscription> insc ;
+
+
+    @ManyToMany
+    private Set<Piste> pistes;
 
 
     public Skieur() {
@@ -59,3 +75,4 @@ public class Skieur {
         this.vile = vile;
     }
 }
+//oneToMany uni / mapped by

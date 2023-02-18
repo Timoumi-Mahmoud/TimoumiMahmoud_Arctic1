@@ -1,18 +1,25 @@
 package tn.mahmoud.timoumi_1.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import sun.print.resources.serviceui_zh_TW;
+
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
-@Table(name = "Mpniteur")
+@Table(name = "Moniteur")
 public class Moniteur {
     @Id
     private long numMoniteur;
     private String nomM;
     private String prenomM ;
     private Date dateRecu;
+
+
+    @OneToMany
+    private Set<Cours> cour;
+
+
 
     public Moniteur() {
     }

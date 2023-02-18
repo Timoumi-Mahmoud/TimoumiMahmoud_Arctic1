@@ -1,6 +1,7 @@
 package tn.mahmoud.timoumi_1.entity;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name ="Piste")
@@ -16,6 +17,19 @@ public class Piste {
     public Piste() {
     }
 
+/*
+    @ManyToMany(targetEntity = Skieur.class,cascade = {CascadeType.PERSIST, CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH} , fetch = FetchType.EAGER)
+    private Set<Skieur> Skieurs  ;
+
+
+
+*/
+
+    @ManyToMany(mappedBy = "pistes")
+    private Set<Skieur> skieurs;
+
+
+
     public Piste(long numPiste, String nomPiste, Couleur couleur, int longeur, int pente) {
 
         this.numPiste = numPiste;
@@ -24,6 +38,10 @@ public class Piste {
         this.longeur = longeur;
         this.pente = pente;
     }
+
+
+
+
 
 
     public long getNumPiste() {
