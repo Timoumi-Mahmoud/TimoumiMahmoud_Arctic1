@@ -1,5 +1,6 @@
 package tn.mahmoud.timoumi_1.service;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.mahmoud.timoumi_1.entity.Abonnement;
@@ -10,6 +11,16 @@ import java.util.List;
 public class AbonnementService implements IAbonnement{
     @Autowired
     AbonnementRepository abonnementRepository;
+
+
+ //AbonnementRepository abonnementRepository;   //@AllArgsConstructor
+
+  //AbonnementRepository  abonnementRepository =new AbonnementService();
+//controller communicate with view(html, css)
+    // controllerRest expose api (with React, angulate
+
+
+
     @Override
     public List<Abonnement> showAbon() {
         return  abonnementRepository.findAll();

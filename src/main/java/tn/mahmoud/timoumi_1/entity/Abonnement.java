@@ -72,4 +72,7 @@ import java.util.Date;
         public void setTypeAbon(TypeAbonnement typeAbon) {
             this.typeAbon = typeAbon;
         }
+
+
+
     }
