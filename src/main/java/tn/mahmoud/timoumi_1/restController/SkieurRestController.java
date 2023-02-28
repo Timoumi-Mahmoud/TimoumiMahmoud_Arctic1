@@ -13,6 +13,7 @@ public class SkieurRestController {
     @Autowired
     ISkieur iSkieur;
     // interface !! ::: visiblity
+    /*
 @PostMapping("add"  )
     public Skieur addSkieur(@RequestBody Skieur sk){
     return iSkieur.addSkieur(sk);
@@ -27,16 +28,19 @@ public class SkieurRestController {
     return  iSkieur.retrieveSkieurById(id);
 
     }
+    /*
    @GetMapping("list")
     public List<Skieur> retrieveAllSkieurs(){
      return iSkieur.retrieveAllSkieur();
    }
-
+*/
+    /*
 
   @DeleteMapping("delete/{id}")
     public void deleteSkieur( @PathVariable("id")  Long id){
        iSkieur.deleteSkieur(id);
   }
+*/
 
 }
 /*

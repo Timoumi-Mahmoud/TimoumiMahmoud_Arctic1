@@ -28,21 +28,22 @@ public class AbonnementService implements IAbonnement{
 
     @Override
     public Abonnement getAbonByID(long id) {
-        return null;
+        return abonnementRepository.findById(id).orElse(null);
     }
 
     @Override
     public Abonnement AddAbo(Abonnement abonnement) {
-        return null;
+        return abonnementRepository.save(abonnement);
     }
 
     @Override
     public Abonnement update(Abonnement abonnement) {
-        return null;
+        return abonnementRepository.save(abonnement);
     }
 
     @Override
     public void DeleteAbo(long id) {
+        abonnementRepository.deleteById(id);
 
     }
 }

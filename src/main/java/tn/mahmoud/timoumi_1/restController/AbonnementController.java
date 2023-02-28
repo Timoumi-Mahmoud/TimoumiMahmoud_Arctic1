@@ -7,13 +7,14 @@ import tn.mahmoud.timoumi_1.service.IAbonnement;
 
 import java.util.List;
 
-@RestController
+@RestController()
 public class AbonnementController {
     @Autowired
     IAbonnement iAbonnement;
     // interface !! ::: visiblity
     @PostMapping("add"  )
-    public Abonnement addAbon(@RequestBody Abonnement abo){
+    public Abonnement addAbon(@RequestBody Abonnement abo)
+    {
         return iAbonnement.AddAbo(abo);
     }
 
@@ -27,7 +28,8 @@ public class AbonnementController {
 
     }
     @GetMapping("list")
-    public List<Abonnement> retrieveAllSkieurs(){
+    public List<Abonnement> retrieveAllSkieurs()
+    {
         return iAbonnement.showAbon();
     }
 

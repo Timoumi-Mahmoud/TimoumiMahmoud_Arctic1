@@ -32,6 +32,13 @@ import java.util.Date;
             this.prixAbon = prixAbon;
             this.typeAbon = typeAbon;
         }
+        public Abonnement(long numAbon, Date dateDebut, Date dateFin, Float prixAbon) {
+            this.numAbon = numAbon;
+            this.dateDebut = dateDebut;
+            this.dateFin = dateFin;
+            this.prixAbon = prixAbon;
+
+        }
 
         public long getNumAbon() {
             return numAbon;
